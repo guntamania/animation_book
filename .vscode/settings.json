@@ -1,0 +1,82 @@
+{
+  "dart.flutterSdkPath": null,
+  "dart.checkForSdkUpdates": true,
+  "dart.previewFlutterUiGuides": true,
+  "dart.previewFlutterUiGuidesCustomTracking": true,
+  "dart.flutterOutline": true,
+  "dart.flutterCreateAndroidLanguage": "kotlin",
+  "dart.flutterCreateIOSLanguage": "swift",
+  "dart.flutterCreateOffline": false,
+  "dart.flutterCreatePlatforms": [
+    "android",
+    "ios",
+    "web"
+  ],
+  "dart.flutterScreenshotPath": "./screenshots",
+  "dart.enableSdkFormatter": true,
+  "dart.lineLength": 120,
+  "dart.insertArgumentPlaceholders": true,
+  "dart.showTodos": true,
+  "dart.previewLsp": true,
+  "dart.warnWhenEditingFilesOutsideWorkspace": true,
+  "dart.warnWhenEditingFilesInPubCache": true,
+  "dart.analysisExcludedFolders": [
+    "build",
+    ".dart_tool"
+  ],
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.rulers": [
+    80,
+    120
+  ],
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 120,
+  "files.associations": {
+    "*.dart": "dart"
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/build": true,
+    "**/.dart_tool": true,
+    "**/ios/Flutter/Flutter.framework": true,
+    "**/ios/Flutter/Flutter.podspec": true,
+    "**/ios/Flutter/Generated.xcconfig": true,
+    "**/ios/Flutter/app.flx": true,
+    "**/ios/Flutter/app.zip": true,
+    "**/ios/Flutter/flutter_assets/": true,
+    "**/ios/Flutter/flutter_export_environment.sh": true,
+    "**/ios/ServiceDefinitions.json": true,
+    "**/ios/Runner/GeneratedPluginRegistrant.*": true,
+    "**/android/app/build": true,
+    "**/android/build": true,
+    "**/android/.gradle": true,
+    "**/android/captures/": true,
+    "**/android/gradle-wrapper.jar": true,
+    "**/android/.gradletasknamecache": true,
+    "**/android/app/src/main/java/io/flutter/plugins/": true,
+    "**/android/app/src/main/java/**/GeneratedPluginRegistrant.java": true
+  },
+  "emmet.includeLanguages": {
+    "dart": "html"
+  },
+  "bracket-pair-colorizer-2.colors": [
+    "#ffd700",
+    "#da70d6",
+    "#87ceeb"
+  ],
+  "workbench.colorCustomizations": {
+    "dart.closingLabels": "#90a4ae"
+  }
+}

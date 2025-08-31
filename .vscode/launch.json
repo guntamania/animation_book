@@ -1,0 +1,113 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Flutter: デバッグモード",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main.dart",
+      "flutterMode": "debug",
+      "args": []
+    },
+    {
+      "name": "Flutter: プロファイルモード",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main.dart",
+      "flutterMode": "profile",
+      "args": []
+    },
+    {
+      "name": "Flutter: リリースモード",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main.dart",
+      "flutterMode": "release",
+      "args": []
+    },
+    {
+      "name": "Flutter: Chrome (Web)",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main.dart",
+      "flutterMode": "debug",
+      "deviceId": "chrome",
+      "args": [
+        "--web-port",
+        "3000"
+      ]
+    },
+    {
+      "name": "Flutter: Edge (Web)",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main.dart",
+      "flutterMode": "debug",
+      "deviceId": "edge",
+      "args": [
+        "--web-port",
+        "3001"
+      ]
+    },
+    {
+      "name": "Flutter: iOS Simulator",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main.dart",
+      "flutterMode": "debug",
+      "deviceId": "ios",
+      "args": []
+    },
+    {
+      "name": "Flutter: Android",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main.dart",
+      "flutterMode": "debug",
+      "deviceId": "android",
+      "args": []
+    },
+    {
+      "name": "Flutter: カスタム (引数指定)",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main.dart",
+      "flutterMode": "debug",
+      "args": [
+        "--dart-define",
+        "FLAVOR=development"
+      ]
+    },
+    {
+      "name": "Flutter: デバッグ (詳細ログ)",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main.dart",
+      "flutterMode": "debug",
+      "args": [
+        "--verbose"
+      ],
+      "vmAdditionalArgs": [
+        "--observe",
+        "--pause-isolates-on-start"
+      ]
+    },
+    {
+      "name": "Flutter: テスト実行",
+      "type": "dart",
+      "request": "launch",
+      "program": "test/",
+      "args": [],
+      "vmAdditionalArgs": []
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Flutter: 全プラットフォーム同時起動",
+      "configurations": [
+        "Flutter: Chrome (Web)",
+        "Flutter: iOS Simulator"
+      ]
+    }
+  ]
+}
