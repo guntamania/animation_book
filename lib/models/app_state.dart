@@ -1,46 +1,21 @@
-import 'package:flutter/foundation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-@immutable
-class AppState {
-  const AppState({required this.counter, required this.isLoading, required this.userName, required this.theme, required this.currentPage});
+part 'app_state.freezed.dart';
+part 'app_state.g.dart';
 
-  final int counter;
-  final bool isLoading;
-  final String userName;
-  final AppTheme theme;
-  final AppPage currentPage;
+@freezed
+abstract class AppState with _$AppState {
+  const AppState._();
 
-  AppState copyWith({int? counter, bool? isLoading, String? userName, AppTheme? theme, AppPage? currentPage}) {
-    return AppState(
-      counter: counter ?? this.counter,
-      isLoading: isLoading ?? this.isLoading,
-      userName: userName ?? this.userName,
-      theme: theme ?? this.theme,
-      currentPage: currentPage ?? this.currentPage,
-    );
-  }
+  factory AppState({
+    required int counter,
+    required bool isLoading,
+    required String userName,
+    required AppTheme theme,
+    required AppPage currentPage,
+  }) = _AppState;
 
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is AppState &&
-        other.counter == counter &&
-        other.isLoading == isLoading &&
-        other.userName == userName &&
-        other.theme == theme &&
-        other.currentPage == currentPage;
-  }
-
-  @override
-  int get hashCode {
-    return counter.hashCode ^ isLoading.hashCode ^ userName.hashCode ^ theme.hashCode ^ currentPage.hashCode;
-  }
-
-  @override
-  String toString() {
-    return 'AppState(counter: $counter, isLoading: $isLoading, userName: $userName, theme: $theme, currentPage: $currentPage)';
-  }
+  factory AppState.fromJson(Map<String, dynamic> json) => _$AppStateFromJson(json);
 }
 
 enum AppTheme { light, dark }
@@ -67,7 +42,7 @@ extension AppPageExtension on AppPage {
         return '/riverpod-hooks-demo';
     }
   }
-  
+
   String get displayName {
     switch (this) {
       case AppPage.listDemo:

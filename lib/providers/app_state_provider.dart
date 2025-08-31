@@ -1,5 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+
 import '../models/app_state.dart' as models;
 
 part 'app_state_provider.g.dart';
@@ -8,7 +9,7 @@ part 'app_state_provider.g.dart';
 class AppState extends _$AppState {
   @override
   models.AppState build() {
-    return const models.AppState(
+    return models.AppState(
       counter: 0,
       isLoading: false,
       userName: 'ユーザー',
@@ -33,13 +34,10 @@ class AppState extends _$AppState {
 
   Future<void> incrementAsync() async {
     state = state.copyWith(isLoading: true);
-    
+
     await Future.delayed(const Duration(seconds: 1));
-    
-    state = state.copyWith(
-      counter: state.counter + 1,
-      isLoading: false,
-    );
+
+    state = state.copyWith(counter: state.counter + 1, isLoading: false);
   }
 
   void setUserName(String name) {
@@ -47,9 +45,7 @@ class AppState extends _$AppState {
   }
 
   void toggleTheme() {
-    final newTheme = state.theme == models.AppTheme.light 
-        ? models.AppTheme.dark 
-        : models.AppTheme.light;
+    final newTheme = state.theme == models.AppTheme.light ? models.AppTheme.dark : models.AppTheme.light;
     state = state.copyWith(theme: newTheme);
   }
 
